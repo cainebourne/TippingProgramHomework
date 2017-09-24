@@ -24,6 +24,9 @@ public class BartenderTipCalculator implements TipCalculator {
     }
 
     public final void setDrinkQty(int drinkQty) {
+        if(drinkQty <= 0){
+            throw new IllegalArgumentException("drink quantity is required");
+        }
         this.drinkQty = drinkQty;
     }
 
@@ -32,6 +35,9 @@ public class BartenderTipCalculator implements TipCalculator {
     }
 
     public final void setTipPerDrink(double tipPerDrink) {
+        if(tipPerDrink <= 0){
+            throw new IllegalArgumentException("tip per drink is required");
+        }
         this.tipPerDrink = tipPerDrink;
     }
     

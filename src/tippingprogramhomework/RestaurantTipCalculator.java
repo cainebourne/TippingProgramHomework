@@ -25,6 +25,9 @@ public class RestaurantTipCalculator implements TipCalculator {
     }
 
     public final void setTipPercent(double tipPercent) {
+        if(tipPercent <= 0){
+            throw new IllegalArgumentException("tip percentage is required");
+        }
         this.tipPercent = tipPercent;
     }
 
@@ -33,6 +36,9 @@ public class RestaurantTipCalculator implements TipCalculator {
     }
 
     public final void setBillAmt(double billAmt) {
+        if(billAmt <= 0){
+            throw new IllegalArgumentException("bill amount is required");
+        }
         this.billAmt = billAmt;
     }
     
