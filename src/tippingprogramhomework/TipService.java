@@ -22,7 +22,7 @@ public class TipService {
 
     public final  void setCalc(TipCalculator calc) {
         if(calc == null){
-            throw new illegalArgumentException("No tip calculator provided")
+            throw new IllegalArgumentException("No tip calculator provided");
         }
         this.calc = calc;
     }
