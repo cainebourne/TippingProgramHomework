@@ -10,8 +10,9 @@ public class RestaurantTipCalculator implements TipCalculator {
     private double billAmt;
     
     public RestaurantTipCalculator(double billAmt, double tipPercent ){
-        this.billAmt = billAmt;
-        this.tipPercent = tipPercent;
+        setbillAmt(billAmt);
+        settipPercent(tipPercent);
+        ;
         
     }
     
