@@ -9,10 +9,10 @@ public class TipService {
     private TipCalculator calc;
 
     public TipService(TipCalculator calc) {
-        this.calc = calc;
+        setCalc(calc);
     }
     
-    public double calcTip(){
+    public final double calcTip(){
         return calc.calcTip();
     }
 
@@ -20,7 +20,10 @@ public class TipService {
         return calc;
     }
 
-    public  void setCalc(TipCalculator calc) {
+    public final  void setCalc(TipCalculator calc) {
+        if(calc == null){
+            throw new illegalArgumentException("No tip calculator provided")
+        }
         this.calc = calc;
     }
     
