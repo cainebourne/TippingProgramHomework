@@ -10,8 +10,9 @@ public class BartenderTipCalculator implements TipCalculator {
     private double tipPerDrink;
 
     public BartenderTipCalculator(int drinkQty, double tipPerDrink) {
-        this.drinkQty = drinkQty;
-        this.tipPerDrink = tipPerDrink;
+        setdrinkQty(drinkQty);
+        settipPerDrink(tipPerDrink);
+        
     }
     
     @Override
